@@ -6,7 +6,7 @@
 #' It can either extract by itself or generate the SQL to make a query.  
 #' In this way it can be combined to make compound queries.
 #' The where argument is equivalent to the WHERE clause in sql
-#' The elements are converted to SQL using dplyr::translate_sql_q
+#' The elements are converted to SQL using dplyr::translate_sql_
 #' If an element is wrapped in a `.()`, the element is expanded.
 #' Dates should be entered as strings in ISO format (%Y-%m-%d)
 #' 
