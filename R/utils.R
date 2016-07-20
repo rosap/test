@@ -70,7 +70,7 @@ to_stata <- function(dat, fname, stata13 = FALSE, ...){
 #' 
 #' Note that this function is for help in constructing raw SQL queries and should not be used as an 
 #' input to the \code{where} argument in \code{select_event} calls.
-#' This is because these calls use translate_sql_q to translate from R code to SQL
+#' This is because these calls use translate_sql_ to translate from R code to SQL
 #' 
 #' @export
 #' 
