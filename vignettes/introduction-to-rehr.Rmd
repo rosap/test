@@ -114,8 +114,7 @@ The primary generic query function is `select_events()` and is able to select al
 ```{r, message = FALSE} 
 diabetes_codes <- clinical_codes[clinical_codes$list == "Diabetes",]
 select_events(db, tab = "Clinical", columns = c("patid", "eventdate", "medcode"), 
-              where = "medcode %in% .(diabetes_codes$medcode) & 
-                       eventdate < '2006-01-01' & eventdate >= '2005-01-01'")
+              where = "medcode %in% .(diabetes_codes$medcode)")
 ```
 
 The `where` argument is equivalent to the WHERE clause in SQL, in that it is used to select subsets of the data table.  The user must supply a string representation of valid `R` code, which is then translated  to SQL via the `dplyr::translate_sql_q` function.  There are two important caveats to this:
