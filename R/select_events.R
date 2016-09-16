@@ -35,7 +35,7 @@ select_events <- function(db = NULL, tab, columns = "*", where = NULL,
     assert_that(is.character(tab) && length(tab) == 1)
     columns <- paste(columns, collapse = ", ")
     if(is.character(where)){
-        where_clause <- translate_sql_(parse(text = expand_string(where)))
+        where_clause <- translate_sql_(expand_string(where))
         sql_query <- paste("SELECT", columns, "FROM", tab, "WHERE", where_clause)
     } else sql_query <- paste("SELECT", columns, "FROM", tab)
     if(sql_only){
